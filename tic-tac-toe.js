@@ -1,6 +1,33 @@
 document.addEventListener('DOMContentLoaded',function(){
   let squares=document.querySelectorAll('#board div')
-  squares.forEach((squares)=>{
-  squares.classList.add('square')
+  squares.forEach((square)=>{
+  square.classList.add('square')
   })
+
+  let gameTracker = Array(9).fill(null);
+  let currentPlayer = 'O';
+
+  squares.forEach((square,index)=>{
+    square.addEventListener('click',function(){
+      if (gameTracker[index]===null)
+        {
+          gameTracker[index]=currentPlayer;
+          square.innerHTML=currentPlayer;
+          square.classList.add(currentPlayer);
+
+          if (currentPlayer === 'X') 
+          {
+            currentPlayer = 'O';
+          } 
+          else 
+          {
+            currentPlayer = 'X';
+          }
+        }
+
+    });
+  });
+    
+    
 });
+
