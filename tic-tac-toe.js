@@ -27,7 +27,5 @@ document.addEventListener('DOMContentLoaded',function(){
 
     });
   });
-    
-    
 });
 
