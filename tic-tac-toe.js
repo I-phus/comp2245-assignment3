@@ -27,5 +27,16 @@ document.addEventListener('DOMContentLoaded',function(){
 
     });
   });
+
+  squares.forEach((square)=>{
+    square.addEventListener('mouseenter',function(){
+        square.classList.add('hover')
+    })
+
+    square.addEventListener('mouseleave',function(){
+      square.classList.remove('hover')
+  })
+    
+  })
 });
 
